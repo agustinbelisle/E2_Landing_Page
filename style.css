@@ -16,14 +16,15 @@
     display: flex;
     justify-content: space-around; 
     align-items: center;
-    background-color: grey;
+    background-color: white;
     padding: 1rem; 
+    border: 2px solid grey;
 
   }
 
   ul a{
 
-    color: white;
+    color: grey;
     text-decoration: none;
 
   }
@@ -35,5 +36,3 @@
     gap: 20px; 
 
   }
-
-
