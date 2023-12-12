@@ -1,13 +1,33 @@
+:root {
+  /* bg colors */
+  --background: #ebecf0;
+  --primary: #1e50ff;
+  --secondary: #272d37;
+
+
+  /* Text colors */
+  --text-grey: #5f6163;
+  --text-white: #f3f4f6;
+
+  /* Decoration */
+  --fire: #ff6d00;
+  --electric: #64d3ff;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    font-family: "Poppins", sans-serif;
+    color: var(--text-white);
   }
 
   body{
 
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-color: black;
+    background-color: var(--secondary);
     
   }
 
@@ -18,7 +38,7 @@
     align-items: center;
     background-color: white;
     padding: 1rem; 
-    border: 2px solid grey;
+    border: 3px solid grey;
 
   }
 
@@ -26,7 +46,7 @@
 
     color: grey;
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
 
   }
 
@@ -34,6 +54,107 @@
 
     list-style: none;
     display: flex; 
-    gap: 20px; 
+    gap: 60px; 
 
   }
+
+  main {
+    background-color: var(--background);
+    display: flex;  
+    flex-direction: column; 
+    align-items: center; 
+  }
+
+  h1 {
+    color: var(--text-white);
+    font-size: 48px;
+    font-weight: 800;
+    margin-bottom: 30px;
+  }
+
+  .hero-section { 
+
+    display: flex; 
+    gap: 50px; 
+    max-width: 1900px;
+    align-items: center;
+    padding: 150px;
+    background-image: linear-gradient(to right, rgb(99, 22, 201),rgb(93, 199, 231),rgb(52, 103, 212));
+  }
+  
+  .hero-section ul{
+    gap: 20px;
+  }
+
+  .hero-section ul a{
+
+    color: var(--text-white);
+  }
+
+
+  
+  .hero-info-paragraph {
+  color: var(--text-white);
+  font-size: 24px;
+  margin-bottom: 50px;
+  
+  }
+
+  .hero-link {
+
+    background-color: var(--primary);
+    border-radius: 5px;
+    padding: 20px;
+    
+   }
+
+   .hero-card {
+
+    width: 700px; 
+    flex-shrink: 0;
+    background-color: var(--secondary);
+    border-radius: 20px; 
+    padding: 20px; 
+    
+  }
+
+
+  .hero-card img {
+    width: 100%;
+  }
+
+  .about-info {
+    gap: 20px;
+  }
+  
+  .about-section {
+    
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    max-width: 1200px;
+
+  }
+  
+  h2 {
+    
+    font-size: 35px;
+    color: var(--text-grey);
+    
+  }
+  
+  .about-info p {
+    color: var(--text-grey);
+  }
+  
+  .about-info-description {
+    width: 100%;
+  }
+
+
+
+  
+
+
+
+
