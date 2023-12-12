@@ -1,17 +1,10 @@
 :root {
-  /* bg colors */
+
   --background: #ebecf0;
   --primary: #1e50ff;
   --secondary: #272d37;
-
-
-  /* Text colors */
   --text-grey: #5f6163;
   --text-white: #f3f4f6;
-
-  /* Decoration */
-  --fire: #ff6d00;
-  --electric: #64d3ff;
 }
 
 * {
