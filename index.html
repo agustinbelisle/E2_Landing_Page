@@ -6,21 +6,30 @@
     <title>Document</title>
 
     <link rel="stylesheet" href="style.css" />
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="mediaquerie.css">
+
 
 </head>
 
 <body>
 
- <header>
+ <header class="header">
 
-    <nav>
+    <nav class="navbar">
+
         <img src="logoaeb.png" alt="logo" class="logo">
-        <ul class="nav">
-            
-            <li class="nav_link"><a href="#">INICIO</a></li>
-            <li class="nav_link"><a href="#">SERVICIOS</a></li>
-            <li class="nav_link"><a href="#">CLIENTES</a></li>
-            <li class="nav_link"><a href="#">SOPORTE</a></li>
+        
+        <label for="toggle-menu"><i class="fa-solid fa-bars"></i></label>
+        <input type="checkbox" id="toggle-menu"/>
+
+        <ul class="nav-list">
+            <li ><a href="#" class="nav-list">INICIO</a></li>
+            <li><a href="#" class="nav-list">SERVICIOS</a></li>
+            <li><a href="#" class="nav-list">CLIENTES</a></li>
+            <li><a href="#" class="nav-list">SOPORTE</a></li>
             
         </ul>
     </nav>
@@ -46,7 +55,7 @@
             <ul>
                 
                 <li>            
-                 <a class="hero-link" href="#">Descargar para Windows</a>
+                 <a class="hero-link" href="#">Descargar</a>
                 </li>
 
                 <li>
@@ -94,16 +103,187 @@
               Gracias por confiar en AEB, tu aliado en la seguridad digital.
             </p>
           </br>
+          </br>
           </div>
         </div>
 
     </section>
+    
+
+    <section class="info-section">
+
+
+      <div class="info-cards-container">
+        <div class="info-card">
+          <img src="./icons/shield.png" alt="" />
+          <h3>Protección total</h3>
+          <p>
+           Máxima seguridad frente a todo tipo de amenazas online, desde virus hasta ransomware.
+          </p>
+        </div>
+
+        <div class="info-card">
+          <img src="./icons/cloud.png" alt="" />
+          <h3>Copia de seguridad</h3>
+          <p>
+            Con nuestro servicio de backup, podrás guardar tus archivos más importantes en la nube y acceder a ellos desde cualquier dispositivo.
+          </p>
+        </div>
+
+        <div class="info-card">
+          <img src="./icons/gear.png" alt="" />
+          <h3>Optimización del PC</h3>
+          <p>
+            Nuestro software te ayuda a mejorar el rendimiento de tu ordenador, eliminando archivos basura, corrigiendo errores y acelerando el inicio.
+          </p>
+        </div>
+      </div>
+
+      <div class="info-cards-container">
+
+        <div class="info-card">
+         <img src="./icons/padlock.png" alt="" />
+         <h3>Privacidad garantizada</h3>
+         <p>
+           Protege tu identidad y tus datos personales de los hackers, los espías y los anunciantes.
+         </p>
+        </div>
+
+        <div class="info-card">
+         <img src="./icons/family.png" alt="" />
+         <h3>Control parental</h3>
+         <p>
+           Supervisa y limita el uso de Internet de tus hijos, bloqueando el acceso a contenidos inapropiados o peligrosos.
+         </p>
+        </div>
+
+        <div class="info-card">
+         <img src="./icons/cellphone.png" alt="" />
+         <h3>Protección móvil</h3>
+         <p>
+           Nuestro antivirus se adapta a tus dispositivos móviles, protegiéndolos de robos, pérdidas, virus y otras amenazas.
+         </p>
+        </div>
+
+    </div>
+      
+
+    </div>
+
+    </section>
+
+    <section class="contact">
+
+      <div class="contact-form">
+
+          <h2>Contáctanos</h2>
+          <p> Si tienes alguna duda, problema o sugerencia sobre nuestro antivirus, no dudes en escribirnos. 
+          </br>Estaremos encantados de atenderte.</p>
+          
+          <form action="enviar.php" method="post">
+
+            <div class="form-group">
+              <label for="name">Nombre</label>
+              <input type="text" id="name" name="name" placeholder="Ingresa tu nombre" required>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Correo electrónico</label>
+              <input type="email" id="email" name="email" placeholder="Ingresa tu email" required>
+            </div>
+
+            <div class="form-group">
+              <label for="subject">Asunto</label>
+              <select id="subject" name="subject" required>
+                <option value="">Selecciona un asunto</option>
+                <option value="Soporte técnico">Soporte técnico</option>
+                <option value="Facturación">Facturación</option>
+                <option value="Sugerencias">Sugerencias</option>
+                <option value="Otros">Otros</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Mensaje</label>
+            </br>
+              <textarea id="message" name="message" placeholder="Escribe tu mensaje" required></textarea>
+            </div>
+
+            <div class="form-group">
+              <input type="checkbox" id="privacy" name="privacy" required>
+              <label for="privacy">He leído y acepto la política de privacidad</label>
+            </div>
+
+            <div class="form-group">
+              <button type="submit">Enviar</button>
+            </div>
+          
+          </form>
+
+          
+        </div>
+      </div>
+
+      </div>
+
+
+
+    </section>
+
+    <footer>
+
+      
+
+      <div class="container">
+
+            <div class="col-md-3">
+             <img src="logoaeb.png" alt="Logo de Antivirus AEB" />
+             <p>© 2018-2023 AEB.</br>Todos los derechos reservados.</p>
+            </div>
+            
+          <div class="links">
+            <div class="col-md-3">
+              <h4>Enlaces útiles</h4>
+              <ul>
+                <li><a href="politica-de-privacidad.html">Política de privacidad</a></li>
+                <li><a href="terminos-y-condiciones.html">Términos y condiciones</a></li>
+                <li><a href="preguntas-frecuentes.html">Preguntas frecuentes</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+              </ul>
+            </div>
+
+            <div class="col-md-3">
+              <h4>Redes sociales</h4>
+              <ul>
+                <li><a href="https://www.facebook.com/aebantivirus"></i> Facebook</a></li>
+                <li><a href="https://www.twitter.com/aebantivirus"></i> Twitter</a></li>
+                <li><a href="https://www.instagram.com/aebantivirus"></i> Instagram</a></li>
+                <li><a href="https://www.youtube.com/aebantivirus"></i> YouTube</a></li>
+              </ul>
+            </div>
+          </div>      
+        
+            <div class="col-md-3">
+             <h4>Suscríbete a nuestro boletín</h4>
+             <p>Recibe las últimas noticias, consejos y ofertas de AEB en tu correo electrónico.</p>
+
+             </br>
+             </br>
+             <form action="suscribir.php" method="post">
+             <input type="email" name="email" placeholder="Ingresa tu email" required>
+             <button type="submit">Suscribir</button>
+             </form>
+            </div> 
+      </div>
+
+
+
+
+          
+    </footer>
 
 
  </main>
 
-    
-    
-    
 </body>
 </html>

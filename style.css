@@ -1,6 +1,6 @@
 :root {
 
-  --background: #ebecf0;
+  --background: #ffffff;
   --primary: #1e50ff;
   --secondary: #272d37;
   --text-grey: #5f6163;
@@ -17,6 +17,18 @@
     color: var(--text-white);
   }
 
+  .header{
+    
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white;
+    z-index: 1;
+  }
+
   body{
 
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -24,7 +36,8 @@
     
   }
 
-  nav {
+  
+  .navbar {
 
     display: flex;
     justify-content: space-around; 
@@ -35,9 +48,37 @@
 
   }
 
+  .navbar i{
+    font-size: 36px;
+    display: none;
+  }
+
+  .navbar ul{
+    list-style-type: none;
+    display: flex;
+    gap: 100px;
+  }
+
+  
+  #toggle-menu{
+    display: none;
+  }
+
+  .toggle-menu {
+    display: none;
+    position: absolute;
+    right: 60px;
+  }
+
+  .nav-list{
+    text-decoration: none;
+    color: rgb(99, 22, 201);
+  }
+
+
   ul a{
 
-    color: grey;
+    color: rgb(14, 13, 13);
     text-decoration: none;
     font-size: 1.7rem;
 
@@ -53,7 +94,7 @@
 
   main {
     background-color: var(--background);
-    display: flex;  
+    display: flex; 
     flex-direction: column; 
     align-items: center; 
   }
@@ -67,12 +108,14 @@
 
   .hero-section { 
 
+    margin-top: 238px;
     display: flex; 
     gap: 50px; 
-    max-width: 1900px;
+    width: 100%;
     align-items: center;
     padding: 150px;
     background-image: linear-gradient(to right, rgb(99, 22, 201),rgb(93, 199, 231),rgb(52, 103, 212));
+    
   }
   
   .hero-section ul{
@@ -98,14 +141,15 @@
     background-color: var(--primary);
     border-radius: 5px;
     padding: 20px;
-    
+    border: 3px solid rgb(21, 40, 146);
+   
+
    }
 
    .hero-card {
 
     width: 700px; 
     flex-shrink: 0;
-    background-color: var(--secondary);
     border-radius: 20px; 
     padding: 20px; 
     
@@ -118,12 +162,14 @@
 
   .about-info {
     gap: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   
   .about-section {
     
-    flex-direction: column;
-    align-items: center;
+    padding: 10px;
     gap: 50px;
     max-width: 1200px;
 
@@ -132,21 +178,193 @@
   h2 {
     
     font-size: 35px;
-    color: var(--text-grey);
+    color: rgb(14, 13, 13);
     
   }
   
   .about-info p {
-    color: var(--text-grey);
+    color: rgb(14, 13, 13);;
   }
   
   .about-info-description {
     width: 100%;
   }
 
+  .info-section {
+    background-image: linear-gradient(to right, rgb(99, 22, 201),rgb(93, 199, 231),rgb(52, 103, 212));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    width: 100%;
+    padding: 100px;
+  }
+
+  .info-card {
+    background-color: var(--secondary);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    flex: 1 1 0;
+  }
+
+  .info-card img {
+    width: 50px;
+  }
+
+  .info-cards-container {
+    display: flex;
+    gap: 15px;
+    max-width: 1000px;
+    justify-content: space-between;
+  }
+
+  .info-card p {
+    text-align: center;
+  }
+
+  footer {
+    
+    gap: 50px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+  }
+  
+  .col-md-3 {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+
+  }
+
+  .col-md-3 h4{
+    font-size: 1rem;
+    padding: 10px;
+    color: rgb(14, 13, 13);
+  }
+
+  .col-md-3 p{
+    padding: 30px;
+    color: rgb(14, 13, 13);
+  }
+
+  .col-md-3 a{
+    font-size: 1rem;
+  }
+
+  .col-md-3 ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 50px;
+  }
+  
+  .col-md-3 button{
+    color: black;
+  }
+  
+  .links{
+
+    display: flex;
+    flex-direction: row;
+  }
+
+  .contact{
+
+    background-image: linear-gradient(to right, rgb(99, 22, 201),rgb(93, 199, 231),rgb(52, 103, 212));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    width: 100%;
+    padding-bottom: 100px;
+
+  }
+
+  .form-group{
+
+   background-color: var(--secondary);
+   border-radius: 20px;
+  }
+
+  .contact h2{
+    font-size: 35px;
+    color: var(--text-white);
+    padding: 10px;
+  }
+    
+
+  .contact p{
+    color: var(--text-white);
+    padding: 10px;
+  }
+
+  .contact form label{
+
+    color: var(--text-white);
+  }
+
+  .form-group select{
+    color: black;
+  }
+
+  .form-group option{
+    color: black;
+  }
+
+  .form-group button{
+    color: black;
+  }
+
+  .form-group{
+
+    padding: 10px;
+    
+  }
+
+  .form-group textarea{
+
+    color: black;
+    width: 500px;
+    height: 150px;
+  
+  }
+
+  .contact-form{
+    background-color: var(--secondary);
+    border-radius: 20px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    width: 52.5%;
+    
+  }
+
 
 
   
+
+
+
+
+
+
+  
+
+
 
 
 
